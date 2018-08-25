@@ -37,4 +37,23 @@ class List {
 
         ~List();
 };
+
+template<class T> List<T>::List()
+{
+
+}
+template<class T> List<T>::~List()
+{
+
+}
+
+template<typename T> void List<T>::push_back(T value)
+{
+    head->data=value;
+}
+
+template<typename T> void List<T>::print()
+{
+    cout << head->data;
+}
 #endif
