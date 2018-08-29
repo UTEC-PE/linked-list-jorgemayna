@@ -197,12 +197,29 @@ template<typename T> void List<T>::clear()
             pop_front();
 
         }
+        nodes=0;
         head=NULL;
         delete head;
 
     }
 
 
+
+}
+
+template<typename T> void List<T>::concat(List<T> &other)
+{
+    if(!empty())
+    {
+        tail->next=other.head;
+        tail=other.tail;
+        nodes=nodes+other.nodes;
+
+    }
+    else{
+        head=other.head;
+        tail=other.tail;
+    }
 
 }
 
