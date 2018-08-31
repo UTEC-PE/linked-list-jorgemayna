@@ -8,7 +8,7 @@
 
 using namespace std;
 
-template <typename T>
+template <typename T> // Este código ya lo he visto en otro repositorio: Dylan-Castro
 class List {
     private:
         Node<T>* head;
@@ -51,14 +51,14 @@ template<class T> List<T>::List()
 }
 
 
-template<typename T> T List<T>::front()
+template<typename T> T List<T>::front() // Falta controlar caso de lista vacía
 {
 
     return(head->data);
 
 }
 
-template<typename T> T List<T>::back()
+template<typename T> T List<T>::back() // Igual que el anterior
 {
 
     return(tail->data);
@@ -70,7 +70,7 @@ template<typename T> int List<T>::size()
     return nodes;
 }
 
-template<typename T> bool List<T>::empty()
+template<typename T> bool List<T>::empty() // Se puede simplificar
 {
     bool a=true;
     if(head==NULL)
